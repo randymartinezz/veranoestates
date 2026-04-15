@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color:#EBEBEB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verano Estates® — Premium Real Estate Punta Cana</title>
+  <meta name="description" content="We don't list properties. We close them. Premium real estate in Punta Cana, Dominican Republic.">
+  <meta property="og:title" content="Verano Estates® — Premium Real Estate">
+  <meta property="og:description" content="We don't list properties. We close them.">
+  <link rel="stylesheet" href="src/styles/style.css">
+</head>
+<body>
+
+  <!-- ─── ENTRY OVERLAY ─── -->
+  <verano-entry></verano-entry>
+
+  <!-- ─── NAV ─── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner container">
+      <a href="#" class="nav__logo">
+        <verano-logo size="nav" variant="on-dark"></verano-logo>
+      </a>
+      <span class="nav__tagline" data-i18n="nav_tagline">We curate what actually makes sense.</span>
+    </div>
+  </nav>
+
+  <!-- ─── 01 HERO ─── -->
+  <!-- bg-void: deepest dark, with photo + gradient fallback -->
+  <section class="hero" id="hero">
+    <video class="hero__video" autoplay muted loop playsinline poster="public/assets/images/hero/hero-main.png">
+      <source src="public/assets/video/hero.mov" type="video/mp4">
+    </video>
+    <div class="hero__overlay"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="hero_eyebrow">Punta Cana &nbsp;·&nbsp; Dominican Republic</p>
+      <h1 class="hero__headline" data-i18n-html="hero_headline">
+        We Don't List<br>
+        <em>Properties.</em><br>
+        We Close Them.
+      </h1>
+      <p class="hero__sub" data-i18n="hero_sub">Premium real estate &nbsp;·&nbsp; Absolute discretion &nbsp;·&nbsp; Results.</p>
+      <button type="button" class="btn btn--light hero__cta-btn" data-i18n="hero_cta">START YOUR PROCESS</button>
+    </div>
+
+    <div class="hero__scroll">
+      <span data-i18n="hero_scroll">Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <span class="hero__isotipo-wrap" aria-hidden="true">
+      <img class="hero__isotipo" src="public/assets/logos/verano-estates-logo-1.png" alt="">
+    </span>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__legal" data-i18n-html="footer_legal">All content is presented by VERANO ESTATES<sup>®</sup> for informational and promotional purposes only. Ownership of third-party materials remains with their respective owners. Any unauthorized use, reproduction, or distribution is strictly prohibited. VERANO ESTATES<sup>®</sup> &copy; 2026. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── FLOATING WHATSAPP ─── -->
+  <a class="wa-float" href="https://wa.me/18293481068" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg class="wa-float__icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-float__text" data-i18n="wa_text">Any questions? Chat with us.</span>
+  </a>
+
+  <!-- ─── SELECTION OVERLAY ─── -->
+  <div class="sel-overlay" id="selOverlay" aria-hidden="true">
+    <img class="sel-overlay__iso" src="public/assets/logos/verano-estates-logo-1.png" alt="">
+  </div>
+
+  <!-- ─── MULTI-STEP SELECTION FORM ─── -->
+  <div class="sel-form" id="selForm" role="dialog" aria-modal="true" aria-hidden="true">
+
+    <!-- Top bar: progress track + close -->
+    <div class="sel-form__bar">
+      <div class="sel-form__track">
+        <div class="sel-form__fill" id="selProgress"></div>
+      </div>
+      <button class="sel-form__close-btn" id="selClose" aria-label="Close">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="3" x2="15" y2="15"/><line x1="15" y1="3" x2="3" y2="15"/></svg>
+      </button>
+    </div>
+
+    <div class="sel-form__body">
+
+      <!-- Step 1: Intro -->
+      <div class="sel-form__step sel-form__step--intro" data-step="1">
+        <p class="sel-form__q" data-i18n-html="sf_intro_q">Let's find your<br><em>ideal property.</em></p>
+        <p class="sel-form__intro-sub" data-i18n="sf_intro_sub">We'll ask a few questions to understand your goals and connect you with the right opportunities.</p>
+      </div>
+
+      <!-- Step 2: Name -->
+      <div class="sel-form__step" data-step="2">
+        <span class="sel-form__badge">01</span>
+        <p class="sel-form__q" data-i18n="sf_q1">What's your full name?</p>
+        <input class="sel-form__input" type="text" name="name" placeholder="Your name" autocomplete="name">
+      </div>
+
+      <!-- Step 3: Email -->
+      <div class="sel-form__step" data-step="3">
+        <span class="sel-form__badge">02</span>
+        <p class="sel-form__q" data-i18n="sf_q2">What's your email?</p>
+        <input class="sel-form__input" type="email" name="email" placeholder="your@email.com" autocomplete="email">
+      </div>
+
+      <!-- Step 4: WhatsApp -->
+      <div class="sel-form__step" data-step="4">
+        <span class="sel-form__badge">03</span>
+        <p class="sel-form__q" data-i18n="sf_q3">Your WhatsApp number?</p>
+        <input class="sel-form__input" type="tel" name="phone" placeholder="+1 (000) 000 0000" autocomplete="tel">
+      </div>
+
+      <!-- Step 5: Looking for -->
+      <div class="sel-form__step" data-step="5">
+        <span class="sel-form__badge">04</span>
+        <p class="sel-form__q" data-i18n="sf_q4">What are you looking for?</p>
+        <p class="sel-form__hint" data-i18n="sf_hint_choice">Select the option that best fits</p>
+        <div class="sel-form__opts">
+          <button class="sel-form__opt" type="button" data-value="living">
+            <span class="sel-form__opt-key">A</span>
+            <span class="sel-form__opt-text" data-i18n="sf_living">Living</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="investment">
+            <span class="sel-form__opt-key">B</span>
+            <span class="sel-form__opt-text" data-i18n="sf_invest">Investment</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="both">
+            <span class="sel-form__opt-key">C</span>
+            <span class="sel-form__opt-text" data-i18n="sf_both">Both</span>
+          </button>
+        </div>
+        <input type="hidden" name="looking_for" value="">
+      </div>
+
+      <!-- Step 6: Budget -->
+      <div class="sel-form__step" data-step="6">
+        <span class="sel-form__badge">05</span>
+        <p class="sel-form__q" data-i18n="sf_q5">What's your budget?</p>
+        <p class="sel-form__hint" data-i18n="sf_hint_choice">Select the option that best fits</p>
+        <div class="sel-form__opts">
+          <button class="sel-form__opt" type="button" data-value="under-500k">
+            <span class="sel-form__opt-key">A</span>
+            <span class="sel-form__opt-text">Under $500K</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="500k-1m">
+            <span class="sel-form__opt-key">B</span>
+            <span class="sel-form__opt-text">$500K – $1M</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="1m-3m">
+            <span class="sel-form__opt-key">C</span>
+            <span class="sel-form__opt-text">$1M – $3M</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="3m+">
+            <span class="sel-form__opt-key">D</span>
+            <span class="sel-form__opt-text">$3M +</span>
+          </button>
+        </div>
+        <input type="hidden" name="budget" value="">
+      </div>
+
+      <!-- Step 7: Timeline -->
+      <div class="sel-form__step" data-step="7">
+        <span class="sel-form__badge">06</span>
+        <p class="sel-form__q" data-i18n="sf_q6">When are you planning to move forward?</p>
+        <p class="sel-form__hint" data-i18n="sf_hint_choice">Select the option that best fits</p>
+        <div class="sel-form__opts">
+          <button class="sel-form__opt" type="button" data-value="asap">
+            <span class="sel-form__opt-key">A</span>
+            <span class="sel-form__opt-text" data-i18n="sf_asap">As soon as possible</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="3m">
+            <span class="sel-form__opt-key">B</span>
+            <span class="sel-form__opt-text" data-i18n="sf_3m">Within 3 months</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="6m">
+            <span class="sel-form__opt-key">C</span>
+            <span class="sel-form__opt-text" data-i18n="sf_6m">Within 6 months</span>
+          </button>
+          <button class="sel-form__opt" type="button" data-value="exploring">
+            <span class="sel-form__opt-key">D</span>
+            <span class="sel-form__opt-text" data-i18n="sf_explore">Just exploring</span>
+          </button>
+        </div>
+        <input type="hidden" name="timeline" value="">
+      </div>
+
+      <!-- Step 8: WhatsApp Consent -->
+      <div class="sel-form__step sel-form__step--consent" data-step="8">
+        <span class="sel-form__badge">07</span>
+        <p class="sel-form__q" data-i18n="sf_q8">We will contact you via WhatsApp to continue the process.</p>
+        <p class="sel-form__consent-sub" data-i18n="sf_consent_sub">Do you agree?</p>
+      </div>
+
+      <!-- Step 9: Scheduling — Calendly inline embed -->
+      <div class="sel-form__step sel-form__step--sched" data-step="9">
+        <span class="sel-form__badge">08</span>
+        <p class="sel-form__q" data-i18n="sf_q9">Schedule a call with our team.</p>
+        <p class="sel-form__hint" data-i18n="sf_sched_hint">Pick a day and time that works for you. You can also skip this and we'll reach out directly.</p>
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/ventas-veranoestates/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+        <!-- Calendly inline widget end -->
+      </div>
+
+      <!-- Step 10: Confirmation -->
+      <div class="sel-form__step sel-form__step--thanks" data-step="10">
+        <svg class="sel-form__check" width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="22" cy="22" r="18"/>
+          <path d="M14 22l6 6 10-12"/>
+        </svg>
+        <p class="sel-form__q" data-i18n="sf_thanks">We'll be in touch.</p>
+        <p class="sel-form__thanks-sub" data-i18n="sf_thanks_sub">Thank you for sharing your goals with us. A member of our team will reach out shortly via WhatsApp.</p>
+      </div>
+
+    </div>
+
+    <!-- Bottom nav bar -->
+    <div class="sel-form__bottom">
+      <button class="sel-form__back-sq" id="selBack" aria-label="Back" hidden>
+        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L6 9l6 6"/></svg>
+      </button>
+      <button class="sel-form__action" id="selAction" type="button" data-i18n="sf_continue">Continue</button>
+    </div>
+
+  </div>
+
+  <script src="src/components/i18n.js"></script>
+  <script src="src/components/components.js"></script>
+  <script src="script.js"></script>
+  <!-- Calendly inline widget script -->
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
